@@ -34,4 +34,4 @@ Execute the class: `GerenciadorTarefasMain`
 
 - Database integration
 - Graphical user interface (Swing/JavaFX)
-- Data persistence in files
+- Data persistence in files 
