@@ -6,6 +6,7 @@ A simple Java application to manage your daily tasks efficiently.
 
 - ✅ Add task
 - ✅ Priority of the tasks
+- ✅ Task category support
 - ✅ List all tasks
 - ✅ List pending tasks
 - ✅ List completed tasks
