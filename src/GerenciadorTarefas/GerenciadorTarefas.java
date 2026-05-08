@@ -11,7 +11,7 @@ public class GerenciadorTarefas {
         this.proximoId = 1;
     }
 
-    public void adicionarTarefa(String descricao, String prioridade, String categoria) {
+    public void adicionarTarefa(String descricao, String prioridade, String categoria, String dificuldade) {
 
         if (!prioridade.equalsIgnoreCase("alta") &&
          !prioridade.equalsIgnoreCase("média") &&
@@ -20,13 +20,14 @@ public class GerenciadorTarefas {
             return;
         }
 
-        Tarefa novaTarefa = new Tarefa(descricao, proximoId, prioridade, categoria);
+        Tarefa novaTarefa = new Tarefa(descricao, proximoId, prioridade, categoria, dificuldade);
         tarefas.add(novaTarefa);
         proximoId++;
         System.out.println("✅ Tarefa adicionada com sucesso!");
         System.out.println("Descrição: " + descricao);
         System.out.println("Prioridade: " + prioridade);
         System.out.println("Categoria: " + categoria);
+        System.out.println("Dificuldade: " + dificuldade);
     }
 
     public void listarTodas() {

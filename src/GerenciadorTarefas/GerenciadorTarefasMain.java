@@ -43,11 +43,35 @@ public class GerenciadorTarefasMain {
                             break;
                     }
 
+                    System.out.println("\nEscolha a dificuldade");
+                    System.out.println("1. Alta");
+                    System.out.println("2. Média");
+                    System.out.println("3. Baixa");
+                    System.out.println("Digite a opção (1-3): ");
+                    int opcaoDificuldade = scanner.nextInt();
+                    scanner.nextLine();
+
+                    String dificuldade = scanner.nextLine();
+                    switch (opcaoDificuldade) {
+                        case 1:
+                            dificuldade = "Alta";
+                            break;
+                        case 2:
+                            dificuldade = "Média";
+                            break;
+                        case 3:
+                            dificuldade = "Baixa";
+                            break;
+                        default:
+                            System.out.println("❌ Opção inválida");
+                            break;
+                    }
+
                     System.out.println("Digite a categoria da tarefa: ");
                     String categoria = scanner.nextLine();
 
                     if (opcaoPrioridade >= 1 && opcaoPrioridade <= 3) {
-                        gerenciador.adicionarTarefa(descricao, prioridade, categoria);
+                        gerenciador.adicionarTarefa(descricao, prioridade, categoria, dificuldade);
                     }
                     break;
 

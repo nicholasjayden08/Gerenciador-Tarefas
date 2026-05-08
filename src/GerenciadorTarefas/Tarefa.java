@@ -6,13 +6,15 @@ public class Tarefa {
     private int id;
     private String prioridade;
     private String categoria;
+    private String dificuldade;
 
-    public Tarefa(String descricao, int id, String prioridade, String categoria) {
+    public Tarefa(String descricao, int id, String prioridade, String categoria, String dificuldade) {
         this.descricao = descricao;
         this.id = id;
         this.concluida = false;
         this.prioridade = prioridade;
         this.categoria = categoria;
+        this.dificuldade = dificuldade;
     }
 
     public String getDescricao() {
@@ -33,10 +35,13 @@ public class Tarefa {
     public String getCategoria() {
         return categoria;
     }
+    public  String getDificuldade() {
+        return dificuldade;
+    }
     public String getStatus() {
         return concluida ? "Concluída" : "Pendente...";
     }
     public void exibir() {
-        System.out.println("[" + id + "] " + descricao + " - Prioridade: " + prioridade + " - Categoria: " + categoria + " - "+ getStatus());
+        System.out.println("[" + id + "] " + descricao + " - Prioridade: " + prioridade + " - Categoria: " + categoria + " - Dificuldade: "+ dificuldade + " - " + getStatus());
     }
 }
