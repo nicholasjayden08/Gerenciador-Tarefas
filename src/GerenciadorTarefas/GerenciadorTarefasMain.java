@@ -43,8 +43,11 @@ public class GerenciadorTarefasMain {
                             break;
                     }
 
+                    System.out.println("Digite a categoria da tarefa: ");
+                    String categoria = scanner.nextLine();
+
                     if (opcaoPrioridade >= 1 && opcaoPrioridade <= 3) {
-                        gerenciador.adicionarTarefa(descricao, prioridade);
+                        gerenciador.adicionarTarefa(descricao, prioridade, categoria);
                     }
                     break;
 
