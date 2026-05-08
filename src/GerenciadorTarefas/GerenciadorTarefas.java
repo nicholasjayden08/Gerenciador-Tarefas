@@ -11,11 +11,21 @@ public class GerenciadorTarefas {
         this.proximoId = 1;
     }
 
-    public void adicionarTarefa(String descricao) {
-        Tarefa novaTarefa = new Tarefa(descricao, proximoId);
+    public void adicionarTarefa(String descricao, String prioridade) {
+
+        if (!prioridade.equalsIgnoreCase("alta") &&
+         !prioridade.equalsIgnoreCase("média") &&
+         !prioridade.equalsIgnoreCase("baixa")) {
+            System.out.println("Prioridade inválida! Use: alta, média ou baixa");
+            return;
+        }
+
+        Tarefa novaTarefa = new Tarefa(descricao, proximoId, prioridade);
         tarefas.add(novaTarefa);
         proximoId++;
         System.out.println("✅ Tarefa adicionada com sucesso!");
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Prioridade: " + prioridade);
     }
 
     public void listarTodas() {

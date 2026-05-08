@@ -18,7 +18,34 @@ public class GerenciadorTarefasMain {
                 case 1:
                     System.out.println("Digite a descrição da tarefa: ");
                     String descricao = scanner.nextLine();
-                    gerenciador.adicionarTarefa(descricao);
+
+                    System.out.println("\nEscolha a prioridade");
+                    System.out.println("1. Alta");
+                    System.out.println("2. Média");
+                    System.out.println("3. Baixa");
+                    System.out.println("Digite a opção (1-3): ");
+                    int opcaoPrioridade = scanner.nextInt();
+                    scanner.nextLine();
+
+                    String prioridade = scanner.nextLine();
+                    switch (opcaoPrioridade) {
+                        case 1:
+                            prioridade = "Alta";
+                            break;
+                        case 2:
+                            prioridade = "Média";
+                            break;
+                        case 3:
+                            prioridade = "Baixa";
+                            break;
+                        default:
+                            System.out.println("❌ Opção inválida");
+                            break;
+                    }
+
+                    if (opcaoPrioridade >= 1 && opcaoPrioridade <= 3) {
+                        gerenciador.adicionarTarefa(descricao, prioridade);
+                    }
                     break;
 
                 case 2:
@@ -53,7 +80,7 @@ public class GerenciadorTarefasMain {
                     break;
 
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("❌ Opção inválida!");
             }
         }
         scanner.close();
