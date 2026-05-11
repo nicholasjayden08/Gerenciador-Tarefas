@@ -27,7 +27,7 @@ public class GerenciadorTarefasMain {
                     int opcaoPrioridade = scanner.nextInt();
                     scanner.nextLine();
 
-                    String prioridade = scanner.nextLine();
+                    String prioridade;
                     switch (opcaoPrioridade) {
                         case 1:
                             prioridade = "Alta";
@@ -40,6 +40,7 @@ public class GerenciadorTarefasMain {
                             break;
                         default:
                             System.out.println("❌ Opção inválida");
+                            prioridade = "Média";
                             break;
                     }
 
@@ -51,7 +52,7 @@ public class GerenciadorTarefasMain {
                     int opcaoDificuldade = scanner.nextInt();
                     scanner.nextLine();
 
-                    String dificuldade = scanner.nextLine();
+                    String dificuldade;
                     switch (opcaoDificuldade) {
                         case 1:
                             dificuldade = "Alta";
@@ -64,6 +65,7 @@ public class GerenciadorTarefasMain {
                             break;
                         default:
                             System.out.println("❌ Opção inválida");
+                            dificuldade = "Média";
                             break;
                     }
 
